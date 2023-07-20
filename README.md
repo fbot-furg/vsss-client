@@ -9,7 +9,8 @@ pip install vsss_client
 ```py
 from vsss_client import FIRASim, Command, Team
 
-fira = FIRASim()
+# Expecifique o arquivo de configuração ao instanciar o simulador
+fira = FIRASim("config.ini")
 
 cmd = Command(Team.BLUE, 1, -10, 10)
 cmd2 = Command(Team.YELLOW, 1, 10, -10)
@@ -35,13 +36,6 @@ command_address = 127.0.0.1
 command_port = 20011
 ```
 
-Expecifique o arquivo de configuração ao instanciar o simulador
-
-```py
-from vsss_client import FIRASim
-
-fira = FIRASim("config.ini")
-```
 
 ### Regerando Protos / Ubuntu
 Instale o `protobuf-compiler` 
